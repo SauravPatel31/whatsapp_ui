@@ -15,19 +15,19 @@ class CallPageState extends State<StatefulWidget>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backGroundColor(),
+      //backgroundColor: backGroundColor(),
         appBar: AppBar(
-            backgroundColor: backGroundColor(),
-            foregroundColor: Colors.white,
+           // backgroundColor: backGroundColor(),
+            //foregroundColor: Colors.white,
             title: Text("Calls",),
             actions: [
-              IconButton(onPressed: (){}, icon: Icon(Icons.qr_code_scanner,color: whiteClr(),)),
-              IconButton(onPressed: (){}, icon: Icon(Icons.camera_alt_outlined,color: whiteClr(),)),
-              IconButton(onPressed: (){}, icon: Icon(Icons.search,color: whiteClr(),)),
+              IconButton(onPressed: (){}, icon: Icon(Icons.qr_code_scanner)),
+              IconButton(onPressed: (){}, icon: Icon(Icons.camera_alt_outlined,)),
+              IconButton(onPressed: (){}, icon: Icon(Icons.search,)),
               PopupMenuButton(itemBuilder: (context) {
                 return [
-                  PopupMenuItem(child: Text("Clear call log",style: TextStyle(color: whiteClr()))),
-                  PopupMenuItem(child: Text("Settings",style: TextStyle(color: whiteClr()))),
+                  PopupMenuItem(child: Text("Clear call log")),
+                  PopupMenuItem(child: Text("Settings")),
                 ];
               },
                 color: Color(0xff121B22),
@@ -45,7 +45,7 @@ class CallPageState extends State<StatefulWidget>{
               SizedBox(height: 15,),
               ListTile(
                 leading: CircleAvatar(
-                  backgroundColor: mainColor(),
+                  backgroundColor: Color(0xff25D165),
                   child: Icon(Icons.favorite,color: Colors.black,),
                 ),
                 title: Text("Add to Favourites",style: mytext17(),),
@@ -55,7 +55,7 @@ class CallPageState extends State<StatefulWidget>{
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: mainColor(),
+        backgroundColor:  Color(0xff25D165),
         foregroundColor: Colors.black,
         onPressed: (){},
         child: Icon(Icons.add_ic_call_rounded),

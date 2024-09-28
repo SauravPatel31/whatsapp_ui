@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui/ui_pages/calls_page.dart';
-import 'package:whatsapp_ui/ui_pages/communities_page.dart';
-import 'package:whatsapp_ui/ui_pages/home.dart';
-import 'package:whatsapp_ui/ui_pages/updates_page.dart';
+import 'package:provider/provider.dart';
+import 'package:whatsapp_ui/ui/calls_page.dart';
+import 'package:whatsapp_ui/ui/communities_page.dart';
+import 'package:whatsapp_ui/ui/home.dart';
+import 'package:whatsapp_ui/ui/index_provider.dart';
+import 'package:whatsapp_ui/ui/updates_page.dart';
 import 'package:whatsapp_ui/utils/ui_styling.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+      create: (context)=>IndexProvider(),
+      child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -17,6 +21,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.light
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Color(0xff2C2C2C),
+
+      ),
+      themeMode: ThemeMode.dark,
       home:BottomNavBar() ,
     );
   }
@@ -45,18 +58,16 @@ class BottomNavBarState extends State<StatefulWidget>{
      body: navigatTo[selectedindex],
      bottomNavigationBar: NavigationBar(
        destinations: [
-           NavigationDestination(icon: Icon(Icons.chat_outlined,color: Colors.white,), label: "Chats",selectedIcon: Icon(Icons.chat,color: Colors.white,),),
-           NavigationDestination(icon: Icon(Icons.animation_rounded,color: Colors.white,), label: "Updates",selectedIcon: Icon(Icons.animation_rounded,color: Colors.white,)),
-           NavigationDestination(icon: Icon(Icons.groups_outlined,color: Colors.white,), label: "Communitis",selectedIcon: Icon(Icons.groups,color: Colors.white,)),
-           NavigationDestination(icon: Icon(Icons.call_outlined,color: Colors.white,), label: "Calls",selectedIcon: Icon(Icons.call,color: Colors.white,)),
+           NavigationDestination(icon: Icon(Icons.chat_outlined,), label: "Chats",selectedIcon: Icon(Icons.chat),),
+           NavigationDestination(icon: Icon(Icons.animation_rounded), label: "Updates",selectedIcon: Icon(Icons.animation_rounded)),
+           NavigationDestination(icon: Icon(Icons.groups_outlined), label: "Communitis",selectedIcon: Icon(Icons.groups)),
+           NavigationDestination(icon: Icon(Icons.call_outlined), label: "Calls",selectedIcon: Icon(Icons.call)),
          ],
-       backgroundColor: backGroundColor(),
+      // backgroundColor: backGroundColor(),
        selectedIndex: selectedindex,
        onDestinationSelected: (value){
            selectedindex=value;
-           setState(() {
-             
-           });
+           setState(() {});
        },
        indicatorColor: Color(0xff1FC162).withOpacity(0.3),
 

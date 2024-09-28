@@ -13,20 +13,20 @@ class UpdatePageState extends State<StatefulWidget>{
   @override
   Widget build(BuildContext context) {
    return Scaffold(
-     backgroundColor: backGroundColor(),
+    // backgroundColor: backGroundColor(),
      appBar: AppBar(
-       backgroundColor: backGroundColor(),
-         foregroundColor: Colors.white,
+      // backgroundColor: backGroundColor(),
+         //foregroundColor: Colors.white,
          title: Text("Updates",),
          actions: [
-         IconButton(onPressed: (){}, icon: Icon(Icons.qr_code_scanner,color: whiteClr(),)),
-         IconButton(onPressed: (){}, icon: Icon(Icons.camera_alt_outlined,color: whiteClr(),)),
-         IconButton(onPressed: (){}, icon: Icon(Icons.search,color: whiteClr(),)),
+         IconButton(onPressed: (){}, icon: Icon(Icons.qr_code_scanner)),
+         IconButton(onPressed: (){}, icon: Icon(Icons.camera_alt_outlined,)),
+         IconButton(onPressed: (){}, icon: Icon(Icons.search,)),
           PopupMenuButton(itemBuilder: (context) {
             return [
-             PopupMenuItem(child: Text("Status privacy",style: TextStyle(color: whiteClr()))),
-             PopupMenuItem(child: Text("Create channel",style: TextStyle(color: whiteClr()))),
-             PopupMenuItem(child: Text("Setting",style: TextStyle(color: whiteClr()))),
+             PopupMenuItem(child: Text("Status privacy",)),
+             PopupMenuItem(child: Text("Create channel",)),
+             PopupMenuItem(child: Text("Setting",)),
             ];
           },
           color: Color(0xff121B22),
@@ -57,7 +57,7 @@ class UpdatePageState extends State<StatefulWidget>{
                    child: Container(
                      decoration: BoxDecoration(
                        shape: BoxShape.circle,
-                       border: Border.all(width: 2,color: mainColor())
+                       border: Border.all(width: 2,color:  Color(0xff25D165))
                      ),
                    ),
                    ),
@@ -84,10 +84,10 @@ class UpdatePageState extends State<StatefulWidget>{
          children: [
            FloatingActionButton.small(
              backgroundColor: Color(0xff121B22),
-             onPressed: (){},child: Icon(Icons.edit,color: whiteClr(),),),
+             onPressed: (){},child: Icon(Icons.edit,color: Colors.white,),),
            SizedBox(height: 10,),
            FloatingActionButton(
-             backgroundColor: mainColor(),
+             backgroundColor:  Color(0xff25D165),
              foregroundColor: Colors.black,
              onPressed: (){},
              child: Icon(Icons.camera_alt),

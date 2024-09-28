@@ -13,17 +13,17 @@ class CommunitiePageState extends State<StatefulWidget>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backGroundColor(),
+      //backgroundColor: backGroundColor(),
       appBar: AppBar(
-          backgroundColor: backGroundColor(),
-          foregroundColor: Colors.white,
+          // backgroundColor: backGroundColor(),
+          //foregroundColor: Colors.white,
           title: Text("Communities",),
           actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.qr_code_scanner,color: whiteClr(),)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.camera_alt_outlined,color: whiteClr(),)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.qr_code_scanner,)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.camera_alt_outlined,)),
           PopupMenuButton(itemBuilder: (_){
             return[
-              PopupMenuItem(child: Text("Settings",style: TextStyle(color: whiteClr()),))
+              PopupMenuItem(child: Text("Settings",))
             ];
           },
               color: Color(0xff121B22),
@@ -49,7 +49,7 @@ class CommunitiePageState extends State<StatefulWidget>{
               right: 0,
               child: CircleAvatar(
                 radius: 10,
-                backgroundColor: mainColor(),
+                backgroundColor:  Color(0xff25D165),
                 child: Icon(Icons.add,color: Colors.black,size: 15,),
               ),
             )
