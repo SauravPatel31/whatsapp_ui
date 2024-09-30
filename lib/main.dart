@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        scaffoldBackgroundColor: Color(0xff2C2C2C),
+        scaffoldBackgroundColor: Color(0xff091319),
 
       ),
       themeMode: ThemeMode.dark,

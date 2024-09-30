@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:whatsapp_ui/ui/index_provider.dart';
 import 'package:whatsapp_ui/ui/user_chats_page.dart';
@@ -56,25 +57,33 @@ class ChatesPageState extends State<StatefulWidget>{
       body: mqData!.orientation==Orientation.portrait?SingleChildScrollView(
         child: Column(
           children: [
+            ///searchBar..
             Container(
-
+              width: mqData!.size.width,
+              height: 50,
               padding: EdgeInsets.symmetric(horizontal: 10),
               child: TextField(
                 decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Color(0xff222A2F),
+                  border: InputBorder.none,
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30)
                   ),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30)
                   ),
-                  hintText: "Search..",
+                  hintText: "Ask Meta AI or Search",
+                  prefixIcon: Lottie.asset("assets/lottie/meta.json",width: 17,height: 17),
                   suffixIcon: Icon(Icons.search),
                     
                 ),
               ),
             ),
+            ///Chats List..
             ListView.builder(
               shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
               itemBuilder: (context,index){
                 return InkWell(
                   onTap: (){
@@ -131,18 +140,25 @@ class ChatesPageState extends State<StatefulWidget>{
                       ///SearchBar..
                       TextField(
                         decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Color(0xff222A2F),
                           border: InputBorder.none,
                           enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30)
                           ),
                           focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),),
-                          hintText: 'Search..',
-                          prefixIcon: Icon(Icons.search),
+                              borderRadius: BorderRadius.circular(30)
+                          ),
+                          hintText: "Ask Meta AI or Search",
+                          prefixIcon: Lottie.asset("assets/lottie/meta.json",width: 17,height: 17),
+                          suffixIcon: Icon(Icons.search),
+
                         ),
                       ),
+                      ///Chats List..
                       ListView.builder(
                         shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
                         itemBuilder: (context,index){
                           return ListTile(
                             onTap: (){
