@@ -1,5 +1,16 @@
 # WhatsApp UI  
 
+## Screenshots  
+
+## App  
+
+![localhost_51977_(iPhone 14 Pro Max) (1) (1)](https://github.com/user-attachments/assets/1054831b-3590-49f6-86f8-e11c28ab7280)![localhost_51977_(iPhone 14 Pro Max) (2) (1)](https://github.com/user-attachments/assets/ac739386-85a1-4ae0-b335-69e69efdd1d3)![localhost_51977_(iPhone 14 Pro Max) (3)](https://github.com/user-attachments/assets/cc808897-cf6b-471b-b402-18b78d59f12f)
+
+## Web
+
+![Screenshot (31)](https://github.com/user-attachments/assets/5be4d589-c5d1-445f-9475-ac88ebb4eea7)
+![Screenshot (32)](https://github.com/user-attachments/assets/9c4a6b1c-9d61-4d26-b140-5681cae6216c)
+
 A **responsive WhatsApp UI** built with **Flutter** and **Dart**, featuring **state management** using **Provider**. This project ensures seamless performance across **mobile** and **web** platforms by utilizing **orientation-based design** for responsiveness.  
 
 ## Features  
@@ -42,13 +53,6 @@ Ensure you have the following installed on your machine:
    ```  
 
 The application will launch on a connected device or emulator.  
-
-## Screenshots  
-## App  
-![localhost_51977_(iPhone 14 Pro Max) (1) (1)](https://github.com/user-attachments/assets/1054831b-3590-49f6-86f8-e11c28ab7280)![localhost_51977_(iPhone 14 Pro Max) (2) (1)](https://github.com/user-attachments/assets/ac739386-85a1-4ae0-b335-69e69efdd1d3)![localhost_51977_(iPhone 14 Pro Max) (3)](https://github.com/user-attachments/assets/cc808897-cf6b-471b-b402-18b78d59f12f)
-## Web
-![Screenshot (31)](https://github.com/user-attachments/assets/5be4d589-c5d1-445f-9475-ac88ebb4eea7)
-![Screenshot (32)](https://github.com/user-attachments/assets/9c4a6b1c-9d61-4d26-b140-5681cae6216c)
 
 ## Contributing  
 
